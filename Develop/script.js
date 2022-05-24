@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//Instructor Provided Template: Anthony Cooper
+// Instructor Provided Template: Anthony Cooper
 function generatePassword() {
   //original variables for code
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -15,6 +15,7 @@ function generatePassword() {
   //checks the length of the password, sends code to the very top if user
   //does not choose within length
   if (lengthInput >= 8 && lengthInput <= 128) {
+    console.log(lengthInput);
   } else {
     alert("Not allowed, please select a password within the given length");
     generatePassword();
@@ -22,40 +23,42 @@ function generatePassword() {
 
   //specific variables which will eventually manipulate the original variables
   //set up with confirms because that was easier than prompt
-  var lowercaseInput = confirm("Would you like to have lowercase letters?");
-  var numbersInput = confirm("Would you like to have numbers?");
-  var specialInput = confirm("Would you like to have special characters?")
-  var uppercaseInput = confirm("Would you like to have uppercase letters?");
+  var lowercaseInput = confirm("Would you like to have lowercase letters");
+  console.log(lowercaseInput);
+  var numbersInput = confirm("Would you like to have numbers");
+  console.log(numbersInput);
+  var specialInput = confirm("Would you like to have special characters");
+  console.log(specialInput);
+  var uppercaseInput = confirm("Would you like to have uppercase letters");
+  console.log(uppercaseInput);
 
   //empty strings which we will eventually add to 
-  password = '';
-  userChoice = '';
+  var password = '';
+  var userChoice = '';
 
   //first case which checks if the user has clicked ok on atleast one of the password categories
-  if (!lowercaseInput && !numbersInput && !specialInput && !uppercaseInput) {
+  if (lowercaseInput == false && numbersInput == false && specialInput == false && uppercaseInput == false) {
     alert("You must select one criteria");
-    generatePassword();
   }
-  //if user has chosen any of these, add to original variables
-  if (lowercaseInput) {
+  //if user has chosen, then do
+  if (lowercaseInput == true) {
     userChoice += lowercase;
   }
-  if (numbersInput) {
+  if (numbersInput == true) {
     userChoice += numbers;
   }
-  if (specialInput) {
+  if (specialInput == true) {
     userChoice += special;
   }
-  if (uppercaseInput) {
+  if (uppercaseInput == true) {
     userChoice += uppercase;
   }
-
+  
   //the password generator, does it at the very end after accumulating user entries
   for (var i = 0; i < lengthInput; i++) {
     var randomPass = Math.floor(Math.random() * userChoice.length);
     password += userChoice.substring(randomPass, randomPass + 1);
   }
-
   return password;
 }
 
