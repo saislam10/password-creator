@@ -27,54 +27,45 @@ function generatePassword() {
 
   if (lengthInput >= 8 && lengthInput <= 128) {
     if (lowercaseInput == 'y'){
-      lowercase += userChoice 
-    }
-    else if (lowercaseInput == 'n'){
-
-    }
-    else {
-      alert ("Please enter a valid response!")
-
+      userChoice += lowercase; 
+      writePassword();
+    } else if (lowercaseInput == 'n'){
+      return;
+    } else {
+      alert("Please select a valid choice!");
     }
     if (numbersInput == 'y'){
-      numbers += userChoice 
-    }
-    else if (numbersInput == 'n'){
-
-    }
-    else {
-      alert ("Please enter a valid response!")
-
+      userChoice += numbers; 
+      writePassword();
+    } else if (numbers == 'n'){
+      return;
+    } else {
+      alert("Please select a valid choice!");
     }
     if (specialInput == 'y'){
-      special += userChoice 
-    }
-    else if (specialInput == 'n'){
-
-    }
-    else {
-      alert ("Please enter a valid response!")
-
+      userChoice += special; 
+      writePassword();
+    } else if (specialInput == 'n'){
+      return;
+    } else {
+      alert("Please select a valid choice!");
     }
     if (uppercaseInput == 'y'){
-      uppercase += userChoice 
+      userChoice += uppercase; 
+      writePassword();
+    } else if (uppercaseInput == 'n'){
+      return;
+    } else {
+      alert("Please select a valid choice!");
     }
-    else if (uppercaseInput == 'n'){
-
-    }
-    else {
-      alert ("Please enter a valid response!")
-
-    }
-
-   }
-
-    else {
-    alert("NOT COOL");
   }
-
+  else {
+  alert("Not allowed, please select a password within the given length");
+  }
   return "";
 }
+
+
 
 // Write password to the #password input
 function writePassword() {
