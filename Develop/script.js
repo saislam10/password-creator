@@ -22,9 +22,12 @@ function generatePassword() {
   var uppercaseInput =  prompt("Would you like to have uppercase letters? Yes or No?");
   uppercaseInput = uppercaseInput.toLowerCase()[0];
 
+  password = ""
+  userChoice = ""
+
   if (lengthInput >= 8 && lengthInput <= 128) {
     if (lowercaseInput == 'y'){
-
+      lowercase += userChoice 
     }
     else if (lowercaseInput == 'n'){
 
@@ -34,7 +37,7 @@ function generatePassword() {
 
     }
     if (numbersInput == 'y'){
-
+      numbers += userChoice 
     }
     else if (numbersInput == 'n'){
 
@@ -44,7 +47,7 @@ function generatePassword() {
 
     }
     if (specialInput == 'y'){
-
+      special += userChoice 
     }
     else if (specialInput == 'n'){
 
@@ -54,7 +57,7 @@ function generatePassword() {
 
     }
     if (uppercaseInput == 'y'){
-
+      uppercase += userChoice 
     }
     else if (uppercaseInput == 'n'){
 
@@ -64,7 +67,7 @@ function generatePassword() {
 
     }
 
-
+   }
 
     else {
     alert("NOT COOL");
