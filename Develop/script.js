@@ -23,10 +23,10 @@ function generatePassword() {
 
   //specific variables which will eventually manipulate the original variables
   //set up with confirms because that was easier than prompt
-  var lowercaseInput = confirm("Would you like to have lowercase letters");
-  var numbersInput = confirm("Would you like to have numbers");
-  var specialInput = confirm("Would you like to have special characters")
-  var uppercaseInput = confirm("Would you like to have uppercase letters");
+  var lowercaseInput = confirm("Would you like to have lowercase letters?");
+  var numbersInput = confirm("Would you like to have numbers?");
+  var specialInput = confirm("Would you like to have special characters?")
+  var uppercaseInput = confirm("Would you like to have uppercase letters?");
 
   //empty strings which we will eventually add to 
   password = ' ';
