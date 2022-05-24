@@ -18,19 +18,15 @@ function generatePassword() {
     console.log(lengthInput);
   } else {
     alert("Not allowed, please select a password within the given length");
-    generatePassword();
+    return "";
   }
 
   //specific variables which will eventually manipulate the original variables
   //set up with confirms because that was easier than prompt
-  var lowercaseInput = confirm("Would you like to have lowercase letters");
-  console.log(lowercaseInput);
-  var numbersInput = confirm("Would you like to have numbers");
-  console.log(numbersInput);
-  var specialInput = confirm("Would you like to have special characters");
-  console.log(specialInput);
-  var uppercaseInput = confirm("Would you like to have uppercase letters");
-  console.log(uppercaseInput);
+  var lowercaseInput = confirm("Would you like to have lowercase letters?");
+  var numbersInput = confirm("Would you like to have numbers?");
+  var specialInput = confirm("Would you like to have special characters?");
+  var uppercaseInput = confirm("Would you like to have uppercase letters?");
 
   //empty strings which we will eventually add to 
   var password = '';
@@ -59,6 +55,7 @@ function generatePassword() {
     var randomPass = Math.floor(Math.random() * userChoice.length);
     password += userChoice.substring(randomPass, randomPass + 1);
   }
+  console.log(password);
   return password;
 }
 
