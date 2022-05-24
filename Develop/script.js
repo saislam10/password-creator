@@ -8,11 +8,35 @@ function generatePassword() {
   var special = "#$%&()*+,-./:;<=>?";
   var uppercase = lowercase.toUpperCase();
 
-  var input = parseInt(prompt("Choose a lenght between 8 and 128"));
+  var lengthInput = parseInt(prompt("Choose a length between 8 and 128"));
 
-  if (input >= 8 && input <= 128) {
-    // GOOD CODE GOES HERE
-  } else {
+  var lowercaseInput = prompt("Would you like to have lowercase letters: Yes or No?"); 
+  lowercaseInput = lowercase.toLowerCase()[0];
+
+  var numbersInput =  prompt("Would you like to have numbers: Yes or No?");
+  numbersInput = numbersInput.toLowerCase()[0]; 
+
+  var specialInput = prompt("Would you like to have special characters: Yes or No?")
+  specialInput = specialInput.toLowerCase()[0]; 
+
+  var uppercaseInput =  prompt("Would you like to have uppercase letters? Yes or No?");
+  uppercaseInput = uppercaseInput.toLowerCase()[0];
+
+  if (lengthInput >= 8 && lengthInput <= 128) {
+    if (lowercaseInput == 'y'){
+    }
+    else if (numbersInput == 'y'){
+    }
+    else if (specialInput == 'y'){
+    }
+    else if (uppercaseInput == 'y'){
+    }
+    else (){
+    }
+    
+  }
+
+    else {
     alert("NOT COOL");
   }
 
