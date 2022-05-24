@@ -10,16 +10,16 @@ function generatePassword() {
 
   var lengthInput = parseInt(prompt("Choose a length between 8 and 128"));
 
-  var lowercaseInput = prompt("Would you like to have lowercase letters: Yes or No?"); 
+  var lowercaseInput = prompt("Would you like to have lowercase letters"); 
   lowercaseInput = lowercaseInput.toLowerCase()[0];
 
-  var numbersInput =  prompt("Would you like to have numbers: Yes or No?");
+  var numbersInput =  prompt("Would you like to have numbers");
   numbersInput = numbersInput.toLowerCase()[0]; 
 
-  var specialInput = prompt("Would you like to have special characters: Yes or No?")
+  var specialInput = prompt("Would you like to have special characters")
   specialInput = specialInput.toLowerCase()[0]; 
 
-  var uppercaseInput =  prompt("Would you like to have uppercase letters? Yes or No?");
+  var uppercaseInput =  prompt("Would you like to have uppercase letters");
   uppercaseInput = uppercaseInput.toLowerCase()[0];
 
   password = ""
@@ -62,7 +62,12 @@ function generatePassword() {
   else {
   alert("Not allowed, please select a password within the given length");
   }
-  return "";
+
+  for (var i=0; i<lengthInput; i++){
+    var random = Math.floor(Math.random()*userChoice.length);
+    password += userChoice.substring(random, random +1);
+  }
+  return password;
 }
 
 
