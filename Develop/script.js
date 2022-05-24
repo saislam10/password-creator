@@ -15,7 +15,6 @@ function generatePassword() {
   //checks the length of the password, sends code to the very top if user
   //does not choose within length
   if (lengthInput >= 8 && lengthInput <= 128) {
-    console.log(lengthInput.length);
   } else {
     alert("Not allowed, please select a password within the given length");
     generatePassword();
@@ -29,12 +28,12 @@ function generatePassword() {
   var uppercaseInput = confirm("Would you like to have uppercase letters?");
 
   //empty strings which we will eventually add to 
-  password = ' ';
-  userChoice = ' ';
+  password = '';
+  userChoice = '';
 
   //first case which checks if the user has clicked ok on atleast one of the password categories
   if (!lowercaseInput && !numbersInput && !specialInput && !uppercaseInput) {
-    alert("You must select one criteria")
+    alert("You must select one criteria");
     generatePassword();
   }
   //if user has chosen any of these, add to original variables
@@ -53,8 +52,8 @@ function generatePassword() {
 
   //the password generator, does it at the very end after accumulating user entries
   for (var i = 0; i < lengthInput; i++) {
-    var random = Math.floor(Math.random() * userChoice.length);
-    password += userChoice.substring(random, random + 1);
+    var randomPass = Math.floor(Math.random() * userChoice.length);
+    password += userChoice.substring(randomPass, randomPass + 1);
   }
 
   return password;
