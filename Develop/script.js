@@ -11,7 +11,7 @@ function generatePassword() {
   var lengthInput = parseInt(prompt("Choose a length between 8 and 128"));
 
   var lowercaseInput = prompt("Would you like to have lowercase letters: Yes or No?"); 
-  lowercaseInput = lowercase.toLowerCase()[0];
+  lowercaseInput = lowercaseInput.toLowerCase()[0];
 
   var numbersInput =  prompt("Would you like to have numbers: Yes or No?");
   numbersInput = numbersInput.toLowerCase()[0]; 
@@ -24,17 +24,47 @@ function generatePassword() {
 
   if (lengthInput >= 8 && lengthInput <= 128) {
     if (lowercaseInput == 'y'){
+
     }
-    else if (numbersInput == 'y'){
+    else if (lowercaseInput == 'n'){
+
     }
-    else if (specialInput == 'y'){
+    else {
+      alert ("Please enter a valid response!")
+
     }
-    else if (uppercaseInput == 'y'){
+    if (numbersInput == 'y'){
+
     }
-    else (){
+    else if (numbersInput == 'n'){
+
     }
-    
-  }
+    else {
+      alert ("Please enter a valid response!")
+
+    }
+    if (specialInput == 'y'){
+
+    }
+    else if (specialInput == 'n'){
+
+    }
+    else {
+      alert ("Please enter a valid response!")
+
+    }
+    if (uppercaseInput == 'y'){
+
+    }
+    else if (uppercaseInput == 'n'){
+
+    }
+    else {
+      alert ("Please enter a valid response!")
+
+    }
+
+
 
     else {
     alert("NOT COOL");
