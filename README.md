@@ -20,5 +20,5 @@ In this challenge, there is code for generating a password. The first parameter 
 ## Resources
 [LIVE SITE](https://saislam10.github.io/password-creator/)
 
-[Repository](git@github.com:saislam10/password-creator.git)
+[Repository](https://github.com/saislam10/password-creator.git)
 
