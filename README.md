@@ -15,7 +15,7 @@ In this challenge, there is code for generating a password. The first parameter 
 
 
 ## Visuals
-![Password](./Assets/password.png)
+![Password](./assets/images/password.png)
 
 ## Resources
 [LIVE SITE](https://saislam10.github.io/password-creator/)
